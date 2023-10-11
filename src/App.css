@@ -1,22 +1,151 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
+* {
   box-sizing: border-box;
+  margin: 0;
 }
-body{
-  background-color: #777;
+body {
+  background-color: #e7eae9;
   height: 100vh;
   padding: 0;
 }
 
+.app-container {
+  position: relative; /* Required for absolute positioning within the container */
+}
+
 .canvas .note {
-  background-color: hsl(24, 100%, 90%);
+  background-color: #ffe0cc;
   color: #777;
   width: 150px;
   height: 150px;
-
+  position: absolute;
+  top: 100px; /* Adjust the bottom distance as needed */
+  left: 170px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  
+  background-color: #8eafb8;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  font-family: 'Lobster Two', sans-serif;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.navbar h3 {
+  font-weight: 400;
+  padding: 0 10px 0 10px;
+}
+
+.navbar_logo {
+  display: flex;
+}
+
+.navbar_logo h1 {
+  align-self: center;
+  font-weight: 700;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 10px;
+}
+
+.navbar a:hover {
+  color: #8f2d56;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 25px;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+}
+
+.textarea {
+  appearance: none;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  resize: none;
+  width: 100%;
+  height: calc(100% - 50px);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.add-note-button {
+  position: absolute;
+  bottom: -500px; /* Adjust the bottom distance as needed */
+  right: 10px; /* Adjust the right distance as needed */
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  background-color: #8f2d56;
+  color: #e7eae9;
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar {
+  width: 150px;
+  padding: 10px;
+  position: absolute;
+  height: 100vh;
+  background-color: #8eafb8;
+  z-index: -1;
+}
+
+.sidebar h2,
+h3 {
+  font-family: 'Lobster Two', sans-serif;
+}
+
+.sidebar p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.h3-margin {
+  margin-top: 10px;
+}
+
+.sidebar-rule-names {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-rule-names div {
+  margin-right: 4px;
+}
+
+.small-box-one,
+.small-box-two,
+.small-box-three {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.small-box-one {
+  background-color: #8f2d56;
+}
+
+.small-box-two {
+  background-color: #ffb2b2;
+}
+
+.small-box-three {
+  background-color: #bfb2ff;
 }
